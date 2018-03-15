@@ -38,3 +38,9 @@ public class CircleTreasure extends Treasure {
 	public int getBoundingBoxLength() {
 		return size;
 	}
+	
+	@Override
+	public boolean isTreasureCell(int x, int y) {
+		return treasure[y][x] > 0;
+	}
+}
