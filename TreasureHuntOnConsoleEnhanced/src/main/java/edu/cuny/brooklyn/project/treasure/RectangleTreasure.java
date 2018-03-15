@@ -9,17 +9,19 @@ public class RectangleTreasure extends Treasure {
 	public RectangleTreasure(int size, TreasureValueSetter setter) {
 		this.size = size;
 		treasure = new int[size][size];
+		
 		for (int i=0; i<treasure.length; i++) {
 			for (int j=0; j<treasure[i].length; j++) {
-				int cellValue = setter.getCellValue();
+				int cellValue = setter.getCellValue(i,j);
 				treasure[i][j] = cellValue;
 				setTotalValue(getTotalValue() + cellValue);
 			}
 		}		
 	}
 	
-	public RectangleTreasure(int size) {
-		this(size, () -> GameSettings.DEFAULT_TREASURE_VALUE);
+	public RectangleTreasure(int size) {//this needs to be fixed
+		this(size, (x,y) -> GameSettings.DEFAULT_TREASURE_VALUE);/*{if 
+		});*/
 	}
 
 	@Override
