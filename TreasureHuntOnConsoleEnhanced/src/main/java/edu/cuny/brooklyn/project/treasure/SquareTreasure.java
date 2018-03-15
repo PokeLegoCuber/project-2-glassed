@@ -41,4 +41,5 @@ public class SquareTreasure extends Treasure {
 	public boolean isTreasureCell(int x, int y) {
 		return treasure[y][x] > 0;
 	}
+
 }
