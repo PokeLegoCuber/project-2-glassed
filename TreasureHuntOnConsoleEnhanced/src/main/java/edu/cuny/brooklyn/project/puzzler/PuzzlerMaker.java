@@ -19,6 +19,10 @@ public class PuzzlerMaker {
 			puzzler = new PythagPuzzler();
 			LOGGER.debug("Made a math puzzler: message = " + puzzler.getMessage() + " and answer = " + puzzler.getAnswer());
 			break;
+		case PuzzlerSettings.MATH_PUZZLER_FACT: 
+			puzzler = new FactPuzzler(2, 6);
+			LOGGER.debug("Made a math puzzler: message = " + puzzler.getMessage() + " and answer = " + puzzler.getAnswer());
+			break;
 		default:
 			LOGGER.error("Unsupported puzzler type = " + type);
 			puzzler = null;
