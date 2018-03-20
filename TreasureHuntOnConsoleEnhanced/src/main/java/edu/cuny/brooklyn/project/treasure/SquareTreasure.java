@@ -11,7 +11,7 @@ public class SquareTreasure extends Treasure {
 		treasure = new int[size][size];
 		for (int i=0; i<treasure.length; i++) {
 			for (int j=0; j<treasure[i].length; j++) {
-				int cellValue = setter.getCellValue(i,j);
+				int cellValue = setter.getCellValue();
 				treasure[i][j] = cellValue;
 				setTotalValue(getTotalValue() + cellValue);
 			}
@@ -19,7 +19,7 @@ public class SquareTreasure extends Treasure {
 	}
 	
 	public SquareTreasure(int size) {
-		this(size, (x, y) -> GameSettings.DEFAULT_TREASURE_VALUE);
+		this(size, () -> GameSettings.DEFAULT_TREASURE_VALUE);
 	}
 
 	@Override

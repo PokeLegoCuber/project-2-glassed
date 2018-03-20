@@ -20,6 +20,7 @@ public class GameSettings {
 	// default treasure set up
 	public final static int DEFAULT_TREASURE_SIZE = 10;
 	public final static int DEFAULT_TREASURE_VALUE = 1;
+	public final static int EMPTY_TREASURE_VALUE = 0;
 	
 	// number of types of puzzlers
 	public final static int NUM_TYPES_OF_PUZZLERS = 1;
