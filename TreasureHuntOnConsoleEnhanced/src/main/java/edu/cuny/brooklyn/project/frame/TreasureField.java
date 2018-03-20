@@ -48,7 +48,8 @@ public class TreasureField {
 		int xOffset = x - xLeft;
 		int yOffset = y - yTop;
 		LOGGER.debug("Treasure cell at (x, y) = (" + x + "," + y + ")");
-		return treasure.isTreasureCell(xOffset, yOffset);
+		return true;
+		// return treasure.isTreasureCell(xOffset, yOffset);
 	}
 
 

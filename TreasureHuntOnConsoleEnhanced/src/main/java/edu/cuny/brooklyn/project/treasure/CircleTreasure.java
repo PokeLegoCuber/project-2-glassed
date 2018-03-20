@@ -12,11 +12,27 @@ public class CircleTreasure extends Treasure {
 		
 		for (int i=0; i<treasure.length; i++) {
 			for (int j=0; j<treasure[i].length; j++) {
-				int cellValue = setter.getCellValue();
+				int cellValue;
+				if(inCircle(i, j))
+					cellValue = setter.getCellValue();
+				else
+					cellValue = GameSettings.EMPTY_TREASURE_VALUE;
 				treasure[i][j] = cellValue;
 				setTotalValue(getTotalValue() + cellValue);
 			}
 		}		
+	}
+	
+	private boolean inCircle(int y, int x) {
+		double r = getBoundingBoxWidth() / 2;
+		double yy = (y - r) * (y - r);
+		double expectXR = Math.sqrt(r - yy) + r;
+		double expectXL = -Math.sqrt(r - yy) + r;
+		
+		if(x >= expectXL && x <= expectXR)
+			return true;
+		else
+			return false;
 	}
 	
 	public CircleTreasure(int size) {
