@@ -24,10 +24,10 @@ public class CircleTreasure extends Treasure {
 	}
 	
 	private boolean inCircle(int y, int x) {
-		double r = getBoundingBoxWidth() / 2;
+		double r = (getBoundingBoxWidth() / 2) * 0.9;
 		double yy = (y - r) * (y - r);
-		double expectXR = Math.sqrt(r - yy) + r;
-		double expectXL = -Math.sqrt(r - yy) + r;
+		double expectXR = Math.sqrt(r * r - yy) + r;
+		double expectXL = -Math.sqrt(r * r - yy) + r;
 		
 		if(x >= expectXL && x <= expectXR)
 			return true;
