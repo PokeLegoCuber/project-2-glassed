@@ -12,7 +12,11 @@ public class TriangleTreasure extends Treasure {
 		
 		for (int i=0; i<treasure.length; i++) {
 			for (int j=0; j<treasure[i].length; j++) {
-				int cellValue = setter.getCellValue();
+				int cellValue;
+				if(j <= i)
+					cellValue = setter.getCellValue();
+				else
+					cellValue = GameSettings.EMPTY_TREASURE_VALUE;
 				treasure[i][j] = cellValue;
 				setTotalValue(getTotalValue() + cellValue);
 			}
@@ -20,7 +24,7 @@ public class TriangleTreasure extends Treasure {
 	}
 	
 	public TriangleTreasure(int size) {
-		this(size, () -> GameSettings.DEFAULT_TREASURE_VALUE);
+		this(size, () -> 4);
 	}
 
 	@Override

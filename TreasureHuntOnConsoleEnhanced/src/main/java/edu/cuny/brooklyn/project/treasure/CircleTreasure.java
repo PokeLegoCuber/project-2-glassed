@@ -20,7 +20,7 @@ public class CircleTreasure extends Treasure {
 	}
 	
 	public CircleTreasure(int size) {
-		this(size, () -> GameSettings.DEFAULT_TREASURE_VALUE);
+		this(size, () -> 3);
 	}
 
 	@Override
