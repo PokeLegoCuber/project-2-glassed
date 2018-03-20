@@ -15,6 +15,10 @@ public class PuzzlerMaker {
 			puzzler = new SqrtMathPuzzler(5, 15, 0.05);
 			LOGGER.debug("Made a math puzzler: message = " + puzzler.getMessage() + " and answer = " + puzzler.getAnswer());
 			break;
+		case PuzzlerSettings.MATH_PUZZLER_PY: 
+			puzzler = new PythagPuzzler();
+			LOGGER.debug("Made a math puzzler: message = " + puzzler.getMessage() + " and answer = " + puzzler.getAnswer());
+			break;
 		default:
 			LOGGER.error("Unsupported puzzler type = " + type);
 			puzzler = null;
