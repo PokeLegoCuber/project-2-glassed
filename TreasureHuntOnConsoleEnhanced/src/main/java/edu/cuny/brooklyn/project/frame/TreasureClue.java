@@ -15,7 +15,7 @@ public class TreasureClue {
 	/*
 	 * In fact, we can have different types of clues. That can make the game a little more interesting. 
 	 */
-	public static String getClue(int xLeft, int yTop, int width, int length, int attempts) {
+	public static String getClue(int xLeft, int yTop, int width, int length, String name, int attempts) {
 		int clueError = (int) (attempts * GameSettings.DEFAULT_CLUE_RELATIVE_ERROR_INCREMENT * Math.max(width, length));
 		int xOffset = rng.nextInt(clueError) - clueError / 2;
 		int yOffset = rng.nextInt(clueError) - clueError / 2;
@@ -28,7 +28,7 @@ public class TreasureClue {
 				xLeft, yTop, xLeft + width, yTop + length));
 		LOGGER.debug(String.format("Clue is given at (x, y) = (%d, %d)", x, y));
 		
-		return "A treasure of size " + Math.max(width, length) + " is near (" + x + "," + y + ").";
+		return "A "+ name+" treasure of size " + Math.max(width, length) + " is near (" + ((int)(x/2)) + "," + ((int)(y/2)) + "). \"Hint: (x*2), (y*2)\"";
 	}
 
 }
