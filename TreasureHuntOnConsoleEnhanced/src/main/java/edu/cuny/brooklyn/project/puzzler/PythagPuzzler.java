@@ -9,7 +9,6 @@ public class PythagPuzzler extends MathPuzzler{
 	private final static Logger LOGGER = LoggerFactory.getLogger(PythagPuzzler.class);
 	
 	private double answerValue;
-	
 	private Random rng;
 	
 	public PythagPuzzler() {

@@ -8,32 +8,8 @@ public class CircleTreasureTest {
 	@Test
 	public void CircleTest() {
 		int size = 10;
-		boolean [] ifFit = new boolean [size];
-		CircleTreasure cT = new CircleTreasure(size);
-		for(int i = 0; i < size; i++) {
-			ifFit[i] = cT.isTreasureCell(i, i);
-		}
-		boolean [] itFits = new boolean [size];
-		for(int j = 0; j < size; j++) {
-			itFits[j] = true; 
-		}
-		assertArrayEquals(itFits,ifFit);
-	}
-
-	@Test
-	public void CircleTest2() {
-		int size = 100;
-		boolean [] ifFit = new boolean [size + 1];
-		CircleTreasure cT = new CircleTreasure(size);
-		for(int i = 0; i <= size; i++) {
-			ifFit[i] = cT.isTreasureCell(i, i);
-		}
-		
-		boolean [] itFits = new boolean [size + 1];
-		for(int j = 0; j < size; j++) {
-			itFits[j] = true; 
-		}
-		itFits[size] = false;
-		assertArrayEquals(itFits,ifFit);
+		CircleTreasure cT1 = new CircleTreasure(size);
+		CircleTreasure cT2 = new CircleTreasure(size);
+		assertEquals(cT1.getValueAt(1, 1),cT2.getValueAt(1, 1));
 	}
 }
