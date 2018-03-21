@@ -28,6 +28,11 @@ public class TriangleTreasure extends Treasure {
 	}
 
 	@Override
+	public String getShapeName() {
+		return "Triangle";
+	}
+	
+	@Override
 	public int getValueAt(int x, int y) {
 		return treasure[y][x];
 	}
