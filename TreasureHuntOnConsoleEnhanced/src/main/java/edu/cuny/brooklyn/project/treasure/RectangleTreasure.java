@@ -26,6 +26,11 @@ public class RectangleTreasure extends Treasure {
 	public RectangleTreasure(int size) {
 		this(size, () -> 2);
 	}
+	
+	@Override
+	public String getShapeName() {
+		return "Rectangle";
+	}
 
 	@Override
 	public int getValueAt(int x, int y) {
