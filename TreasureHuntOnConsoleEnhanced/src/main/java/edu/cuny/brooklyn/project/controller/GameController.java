@@ -37,6 +37,7 @@ public class GameController {
 					gameFrame.getTreasureField().getTreasureYTop(),
 					gameFrame.getTreasureField().getTreasureBoundingBoxWidth(),
 					gameFrame.getTreasureField().getTreasureBoundingBoxLength(),
+					gameFrame.getTreasureField().getTreasureShape(),
 					attempts);
 			attempts = locateTreasure(clue);
 			
