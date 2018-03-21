@@ -21,6 +21,11 @@ public class SquareTreasure extends Treasure {
 	public SquareTreasure(int size) {
 		this(size, () -> GameSettings.DEFAULT_TREASURE_VALUE);
 	}
+	
+	@Override
+	public String getShapeName() {
+		return "Square";
+	}
 
 	@Override
 	public int getValueAt(int x, int y) {
