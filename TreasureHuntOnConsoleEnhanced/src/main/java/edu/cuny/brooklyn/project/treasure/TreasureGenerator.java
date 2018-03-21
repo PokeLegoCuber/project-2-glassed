@@ -6,18 +6,20 @@ import java.util.Random;
 public class TreasureGenerator {
 	public Treasure generate() {
 		Random rand = new Random();
-		int randnum = rand.nextInt(4);		
+		int randnum = rand.nextInt(4);
+		Random rand = new Random();
+		int  randsize = rand.nextInt(10) + 1;
 		switch(randnum) {
 		case 0:
-			return new SquareTreasure(GameSettings.DEFAULT_TREASURE_SIZE);
+			return new SquareTreasure(randsize);
 		case 1:
-			return new RectangleTreasure(GameSettings.DEFAULT_TREASURE_SIZE);
+			return new RectangleTreasure(randsize);
 		case 2:
-			return new CircleTreasure(GameSettings.DEFAULT_TREASURE_SIZE);
+			return new CircleTreasure(randsize);
 		case 3:
-			return new TriangleTreasure(GameSettings.DEFAULT_TREASURE_SIZE);
+			return new TriangleTreasure(randsize);
 		default:
-			return new SquareTreasure(GameSettings.DEFAULT_TREASURE_SIZE);
+			return new SquareTreasure(randsize);
 		}
 	}
 }
