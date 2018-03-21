@@ -1,13 +1,13 @@
 package edu.cuny.brooklyn.project.treasure;
 
-import edu.cuny.brooklyn.project.GameSettings;
+//import edu.cuny.brooklyn.project.GameSettings;
 import java.util.Random;
 
 public class TreasureGenerator {
 	public Treasure generate() {
 		Random rand = new Random();
 		int randnum = rand.nextInt(4);
-		Random rand = new Random();
+		//Random rand = new Random();
 		int  randsize = rand.nextInt(10) + 1;
 		switch(randnum) {
 		case 0:
