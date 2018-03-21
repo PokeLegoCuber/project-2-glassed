@@ -38,6 +38,11 @@ public class CircleTreasure extends Treasure {
 	public CircleTreasure(int size) {
 		this(size, () -> 3);
 	}
+	
+	@Override
+	public String getShapeName() {
+		return "Circle";
+	}
 
 	@Override
 	public int getValueAt(int x, int y) {
