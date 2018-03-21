@@ -54,6 +54,10 @@ public class TreasureField {
 
 
 
+	public String getTreasureShape() {
+		return treasure.getShapeName();
+	}
+	
 	public char getCharAt(int x, int y) {
 		return field[y][x];
 	}
