@@ -23,7 +23,8 @@ public abstract class Treasure {
 	public abstract int getValueAt(int x, int y);
 	
 	public abstract boolean isTreasureCell(int x, int y);
-
+	
+	public abstract String getShapeName();
 	
 	public int getTotalValue() {
 		return totalValue;
