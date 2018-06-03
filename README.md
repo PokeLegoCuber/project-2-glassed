@@ -18,4 +18,4 @@ Website link: https://pokelegocuber.github.io/project-2-glassed/
 
 ![alt text](chest_plus.png "Image of Treasure Chest")
 
-
+There may be material used that are copyrighted. No copyright infringement is intended. The potentially copyrighted material is used for entertainment purposes. All right's belong to it's rightful owners.
